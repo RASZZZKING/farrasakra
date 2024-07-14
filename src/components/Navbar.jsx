@@ -7,7 +7,7 @@ const Navbar = () => {
   const path = usePathname()
   const LinkNav = ({ children, url }) => (
     <li>
-      <Link href={url} className={path === url && "font-semibold text-white border border-slate-800"}>{children}</Link>
+      <Link href={url} className={`${path === url && "font-semibold text-white border border-slate-800"}`}>{children}</Link>
     </li>
   );
   return (

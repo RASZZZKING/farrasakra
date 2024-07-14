@@ -67,6 +67,7 @@ const page = () => {
               setActiveCard={setActiveCard}
               activeCard={activeCard}
               number={i + 1}
+              key={i}
             />
           ))}
         </div>

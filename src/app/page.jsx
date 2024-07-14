@@ -135,6 +135,7 @@ export default function Home() {
           {
             service.data.map((cb,i)=>(
               <Card
+                key={i}
                 header={cb.name}
                 content={cb.description}
                 setActiveCard={setActiveCard}
