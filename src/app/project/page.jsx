@@ -6,7 +6,7 @@ import { ArrowUpRight } from "@phosphor-icons/react";
 import { ArrowRight, DotsNine, List } from "@phosphor-icons/react/dist/ssr";
 import React, { useState } from "react";
 
-const page = () => {
+const Page = () => {
   const [activeCard, setActiveCard] = useState(1);
 
   return (
@@ -103,4 +103,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

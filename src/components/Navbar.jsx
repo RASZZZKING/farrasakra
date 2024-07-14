@@ -14,9 +14,9 @@ const Navbar = () => {
     <div className="flex justify-center ">
       <div className="navbar px-0 border-b-2 border-b-slate-600 bg-base-100">
         <div className="flex-1">
-          <a className="btn btn-ghost border-2 border-slate-900 hover:border-slate-200 hover:bg-black text-xl">
+          <Link href={"/"} className="btn btn-ghost border-2 border-slate-900 hover:border-slate-200 hover:bg-black text-xl">
             FE | Farrasakra
-          </a>
+          </Link>
         </div>
         <div className="flex-none">
           <ul className="menu menu-horizontal px-1">

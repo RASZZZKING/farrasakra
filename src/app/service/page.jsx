@@ -5,10 +5,11 @@ import Header from "@/components/Header";
 import { service } from "@/model/data";
 import { ArrowUpRight } from "@phosphor-icons/react";
 import { ArrowRight } from "@phosphor-icons/react/dist/ssr";
+import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
 
-const page = () => {
+const Page = () => {
   const [activeCard, setActiveCard] = useState(1);
   return (
     <div className="flex flex-col">
@@ -28,7 +29,7 @@ const page = () => {
           <div className="flex justify-between gap-12">
             <div className="w-4/12 flex-1 cursor-default">
               <figure>
-                <img src={service.data[activeCard - 1].image} alt="..." />
+                <Image width={1000} height={1000} className="w-full" src={service.data[activeCard - 1].image} alt="service photo" />
               </figure>
               {/* <Card
                 header={service.data[activeCard - 1].name}
@@ -76,4 +77,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
