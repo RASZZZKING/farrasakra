@@ -222,11 +222,11 @@ const service = {
     {
       name: "TURN DESIGN INTO CODE",
       image: "/assets/design-hp.jpeg",
-      copywriting: `Being a fullstack web app developer is super exciting. With my skills in both front-end and back-end, I can build web apps from scratch to a slick product you can use. From React and Next.js to Node.js and databases, I got it all covered to make your app run smoothly.
+      copywriting: `Turning design into code has never been this easy. With my skills in React and Next.js, I can take your visual ideas from Figma and Adobe Illustrator and turn them into awesome, responsive websites. Every design element is brought to life with precise detail, ensuring it looks just like your original concept.
 
-As a passionate and eager-to-learn developer, I'm ready to handle your project with speed and efficiency. Every technical detail will be handled meticulously, using the latest tech to ensure top-notch performance. I'll make sure your app not only looks awesome but also works seamlessly.
+As an enthusiastic newbie, I promise efficiency and speed. Your project will be handled with care, using the latest web development techniques to ensure top performance and a killer user experience. Every detail will be meticulously crafted to deliver results you'll love.
 
-Since I'm just starting out, I offer more wallet-friendly rates without cutting corners on quality. This is your golden opportunity to get a professional web app at a more affordable price. Let's build that awesome web app together!`,
+Since I'm just starting out, I offer budget-friendly rates without compromising on quality. This is your golden opportunity to get professional-grade work at a more affordable price. With me, you get the perfect mix of high quality, speed, and cost efficiency. Let's start turning your designs into amazing code together.`,
       description:
         "I can do turn Design Figma, AI, etc. to code, i can make it responsive so the app can use bye phone, desktop, and ipad. I will use the best of javascript framework is NEXT JS, so i can build fullstack app, or just front-end app. I can consume API, Animation, etc.",
     },
