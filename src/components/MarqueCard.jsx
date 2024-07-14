@@ -10,9 +10,6 @@ const MarqueCard = ({
 }) => {
   return (
     <li className={`card max-w-96 ${isMain ? " text-black" : "text-white  bg-opacity-10"}  bg-white  shadow-xl`}>
-      {/* <figure>
-        <img src={imageUrl} alt={altImage} />
-      </figure> */}
       <div className="card-body ">
         <h2 className="card-title">
           {title}
