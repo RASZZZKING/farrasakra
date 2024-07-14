@@ -2,32 +2,91 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.hidden-bar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none;  
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.hidden-bar::-webkit-scrollbar {
+  display: none;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.scroller__inner {
+  padding-block: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+@keyframes slide {
+  to {
+    transform: translateX(calc(-50% - 0.5rem));
+    -webkit-transform: translateX(calc(-50% - 0.5rem));
+    -moz-transform: translateX(calc(-50% - 0.5rem));
+    -ms-transform: translateX(calc(-50% - 0.5rem));
+    -o-transform: translateX(calc(-50% - 0.5rem));
+}
+}
+
+.animate-view {
+  animation: 5s slide infinite linear;
+  -webkit-animation: 5s slide infinite linear;
+}
+
+.cards:hover .animate-view {
+  animation-play-state: paused;
+}
+
+.tag-list {
+  margin: 0;
+  padding-inline: 0;
+  list-style: none;
+}
+
+.scroller:hover .scroller__inner {
+  animation-play-state: paused;
+}
+
+.scroller[data-animated="true"] {
+  overflow: hidden;
+  -webkit-mask: linear-gradient(
+    90deg,
+    transparent,
+    white 2.5%,
+    white 97.5%,
+    transparent
+  );
+  mask: linear-gradient(
+    90deg,
+    transparent,
+    white 2.5%,
+    white 97.5%,
+    transparent
+  );
+}
+
+.scroller[data-animated="true"] .scroller__inner {
+  width: max-content;
+  flex-wrap: nowrap;
+  animation: slide var(--_animation-duration, 120s) var(--_animation-direction, forwards) linear infinite;
+  -webkit-animation: slide var(--_animation-duration, 120s) var(--_animation-direction, forwards) linear infinite;
+}
+
+.scroller[data-dircetion="left"] {
+  --_animation-direction: forwards;
+}
+.scroller[data-dircetion="right"] {
+  --_animation-direction: reverse;
+}
+.scroller[data-duration="fast"] {
+  --_animation-duration: 20s;
+}
+.scroller[data-duration="slow"] {
+  --_animation-duration: 60s;
+}
+
+/* Menambahkan kelas paused untuk berhenti animasi */
+.scroller__inner.paused {
+  animation-play-state: paused !important;
+  -webkit-animation-play-state: paused !important;
 }
