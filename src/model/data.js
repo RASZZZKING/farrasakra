@@ -255,4 +255,49 @@ Since I'm just starting out, I offer more budget-friendly rates without skimping
   ],
 };
 
-export { service, hobbies, myskill, experience };
+const project = {
+  data:[
+    {
+      name: "Thrift 48 Shop",
+      description: "This is a e-commerce for a fashion shop.",
+      image: "/assets/project/iPhone-13-PRO-thrift48shop.vercel.app.png",
+      video: "/assets/project/thrift48shop.webm"
+    },
+    {
+      name: "Sekolah Baik",
+      description: "Sekolah Baik is a website app, contains five apps in one apps. The apps are Kitchen School E-commerce Apps, Education Apps, Chatting Apps, Exam Apps, any features.", 
+      image: "/assets/project/sekolah-baik.vercel.app.png",
+      video: "/assets/project/sekolah-baik.webm"
+    },
+    {
+      name: "University MSJ",
+      description: "University MSJ is a website for a college. The Program is include administation, O-Auth Login, Responsive design web app, registration, and portofolio from the college", 
+      image: "/assets/project/desktop-university-msj.png",
+      video: "/assets/project/univmsj.webm"  
+    },
+    {
+      name: "To Do Application",
+      description: "This is my first project web app, it is responsive. But i make it with PHP Language, and i dont know how to deploy it ahahaha",
+      image: "/assets/project/todoapp.png",
+      video: "/assets/project/todolist.webm"
+    },
+    // {
+    //   name: "Kindes",
+    //   description: "Kindes is a real time chat app, you can chatting with your friends with secure, the chat app is can connect with your friends, and the chat app is have a login and log out systems"
+    // },
+    {
+      name: "Casecool",
+      description: "Casecool is a e-commerce casing handphone, the users are can costumize the image by himself. It is the coolest project, because it is can design an case ahahaha you can see and try self."
+      , image: "/assets/project/casecool.png",
+      video: "/assets/project/casecool.webm"
+    },
+    {
+      name: "Farras 3D Portofolio",
+      description: "My first 3D Portofolio using GSAP and React.",
+      image: "/assets/project/3d.png",
+      video: "/assets/project/3d.webm"
+    }
+  ]
+}
+
+export { service, hobbies, myskill, experience, project };

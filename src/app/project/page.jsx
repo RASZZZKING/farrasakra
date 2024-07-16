@@ -2,6 +2,8 @@
 import Button from "@/components/Button";
 import Card from "@/components/Card";
 import Header from "@/components/Header";
+import ImageSlider from "@/components/ImageSlider";
+import { project, service } from "@/model/data";
 import { ArrowUpRight } from "@phosphor-icons/react";
 import { ArrowRight, DotsNine, List } from "@phosphor-icons/react/dist/ssr";
 import React, { useState } from "react";
@@ -12,7 +14,7 @@ const Page = () => {
   return (
     <div className="flex flex-col gap-4">
       <div className="mt-4">
-        <Header title={"PROJECT NAME"}>
+        <Header title={project.data[activeCard - 1].name}>
           <div className="flex gap-4">
             <div className="aspect-square text-white flex w-12 items-center justify-center bg-dark border-2 border-slate-900 hover:border-white ">
               <DotsNine size={22} weight="bold" />
@@ -27,73 +29,43 @@ const Page = () => {
       <div className="flex flex-col pt-6">
         <div className="flex-1">
           <div className="flex justify-between gap-12">
-            <div className="w-5/12 bg-white">
-              <Card
-                setActiveCard={setActiveCard}
-                activeCard={activeCard}
-                number={1}
-              />
+            <div className="w-5/12 flex justify-center py-4 bg-white">
+              {
+                project.data.map((cb,i)=>(
+                  <video
+                  key={i}
+                autoPlay
+                muted
+                loop
+                className={` ${i+1 !== activeCard && "hidden"} object-scale-down max-h-80`}
+              >
+                <source
+                  type="video/mp4"
+                  src={cb.video}
+                />
+              </video>
+                ))
+              }
             </div>
             <div className="w-7/12 ">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Doloribus labore molestiae ad similique. Dignissimos fugit
-                veniam a eaque voluptatem iste officiis sed enim illo ad neque
-                dolor autem corrupti, eum praesentium voluptatibus. Cum fugit
-                facere accusantium, quas ex exercitationem numquam.
-                <br />
-                <br />
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Architecto dicta commodi veniam quis! Nulla nostrum facere
-                magni, ab error accusantium temporibus reiciendis? Nulla
-                sapiente cum nobis similique vitae omnis reiciendis!
-                <br />
-                <br />
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Architecto dicta commodi veniam quis! Nulla nostrum facere
-                magni, ab error accusantium temporibus reiciendis? Nulla
-                sapiente cum nobis similique vitae omnis reiciendis!
-              </p>
+              <p>{project.data[activeCard - 1].description}</p>
               <br />
             </div>
           </div>
         </div>
       </div>
       <div className="flex mt-3 gap-4">
-        <div className=" grid gap-3 grid-cols-5 flex-1">
-          <Card
-            setActiveCard={setActiveCard}
-            activeCard={activeCard}
-            number={1}
-          />
-          <Card
-            setActiveCard={setActiveCard}
-            activeCard={activeCard}
-            number={1}
-          />
-          <Card
-            setActiveCard={setActiveCard}
-            activeCard={activeCard}
-            number={1}
-          />
-          <Card
-            setActiveCard={setActiveCard}
-            activeCard={activeCard}
-            number={2}
-          />
-          <Card
-            setActiveCard={setActiveCard}
-            activeCard={activeCard}
-            number={3}
-          />
+        <div className=" grid gap-3 grid-cols-5 flex-1 relative">
+          {project.data.map((cb, i) => (
+            <ImageSlider
+              key={i}
+              setActiveCard={setActiveCard}
+              activeCard={activeCard}
+              number={i + 1}
+              imageUrl={cb.image}
+            />
+          ))}
         </div>
-        {/* <div className="w-32" >
-          <Card
-            setActiveCard={setActiveCard}
-            activeCard={activeCard}
-            number={1}
-          />
-        </div> */}
       </div>
       <p className="text-center text-xs mt-4">
         Click the section image above this text if you want see the details of

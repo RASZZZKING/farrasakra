@@ -12,6 +12,7 @@ import { useEffect, useRef, useState } from "react";
 import Card from "@/components/Card";
 import MarqueCard from "@/components/MarqueCard";
 import { myskill, service } from "@/model/data";
+import Image from "next/image";
 
 export default function Home() {
   const [activeCard, setActiveCard] = useState(1);
@@ -61,9 +62,9 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="flex flex-col gap-12">
-      <div className=" min-h-svh border-b-2  border-slate-700 flex items-center">
-        <div className="flex items-end justify-between">
+    <div className="flex flex-col gap-12 ">
+      <div className="  min-h-[90svh] max-h-[90svh] border-b-2   border-slate-700 flex justify-between items-center">
+        <div className="flex items-end w-1/2 justify-between">
           <div className="flex-col flex gap-4">
             <p className="text-lg font-medium">HELLO, I'M</p>
             <p className="font-bold text-8xl leading-tight">
@@ -95,6 +96,15 @@ export default function Home() {
             </div>
           </div>
         </div>
+        <div className="w-1/2 flex items-end justify-center relative">
+          <div className="bg-white  h-3/4 aspect-square absolute"></div>
+          <Image
+            width={10000}
+            height={10000}
+            className=" max-h-[70vh] grayscale aspect-square object-scale-down  "
+            src={"/assets/otots.png"}
+          />
+        </div>
       </div>
 
       <div className="flex flex-col gap-36 my-4 py-6">
@@ -104,19 +114,39 @@ export default function Home() {
         </div>
         <div className="flex-1">
           <div className="flex justify-between">
-            <p className="text-7xl font-bold">
+            <div className="text-7xl relative flex-1 font-bold">
+              <div className="absolute  flex items-end justify-center w-full h-full">
+                <div className="bg-white bg-opacity-10 h-2/3 aspect-square absolute"></div>
+                <Image
+                  width={10000}
+                  height={10000}
+                  className=" max-h-[30vh] grayscale aspect-square object-scale-down  "
+                  src={"/assets/lastras.png"}
+                />
+              </div>
+              <p className="z-[2]">
               ABOUT <br />
               ME
-            </p>
+
+              </p>
+            </div>
             <div className="w-7/12 ">
-            <p>
-                Hi Everyone, big thanks for you have come to see my first website personal portofolio. Ya in this Website i will explains my experience, my skill, my hobby, and my project.
+              <p>
+                Hi Everyone, big thanks for you have come to see my first
+                website personal portofolio. Ya in this Website i will explains
+                my experience, my skill, my hobby, and my project.
                 <br />
                 <br />
-                My name is Farras Akhirio Ramadhan, I am from Bekasi, West Java, Indonesia. Right now i am live on Jombang, East Java, Indonesia. I'm 18th,  I'm a professional Web Developer.
+                My name is Farras Akhirio Ramadhan, I am from Bekasi, West Java,
+                Indonesia. Right now i am live on Jombang, East Java, Indonesia.
+                I'm 18th, I'm a professional Web Developer.
                 <br />
                 <br />
-                Since i was little, i learn to be a placeholder. I sell some bread, Milo Gosok, and since i was 16th i learn to business helm, sparepart helm, airfreshner, perfume body, deodorant. From there i know to communication to others, because i learn by experience and some books.
+                Since i was little, i learn to be a placeholder. I sell some
+                bread, Milo Gosok, and since i was 16th i learn to business
+                helm, sparepart helm, airfreshner, perfume body, deodorant. From
+                there i know to communication to others, because i learn by
+                experience and some books.
               </p>
               <br />
               <Button name={"Read more"} />
@@ -132,18 +162,16 @@ export default function Home() {
           </div>
         </Header>
         <div className="grid gap-3 grid-cols-3 mt-10">
-          {
-            service.data.map((cb,i)=>(
-              <Card
-                key={i}
-                header={cb.name}
-                content={cb.description}
-                setActiveCard={setActiveCard}
-                activeCard={activeCard}
-                number={i+1}
-              />
-            ))
-          }
+          {service.data.map((cb, i) => (
+            <Card
+              key={i}
+              header={cb.name}
+              content={cb.description}
+              setActiveCard={setActiveCard}
+              activeCard={activeCard}
+              number={i + 1}
+            />
+          ))}
         </div>
       </div>
 
