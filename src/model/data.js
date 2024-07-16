@@ -256,46 +256,90 @@ Since I'm just starting out, I offer more budget-friendly rates without skimping
 };
 
 const project = {
-  data:[
+  data: [
     {
       name: "Thrift 48 Shop",
       description: "This is a e-commerce for a fashion shop.",
       image: "/assets/project/iPhone-13-PRO-thrift48shop.vercel.app.png",
-      video: "/assets/project/thrift48shop.webm"
+      video: "/assets/project/thrift48shop.webm",
+      copywriting: `Thrift 48 Shop is your go-to destination for fashion lovers. This e-commerce platform is designed to bring you the trendiest thrift items in a seamless, stylish experience. Imagine browsing through a collection of unique fashion pieces, all in one beautifully crafted website.
+        
+        Built using the power of React and Next.js, Thrift 48 Shop ensures a responsive and smooth user experience. The site’s sleek design and intuitive navigation make shopping a breeze, letting you focus on finding that perfect outfit.
+        
+        What sets Thrift 48 Shop apart is its commitment to both style and functionality. The user interface is not only aesthetically pleasing but also highly functional, providing you with a hassle-free shopping experience.
+        
+        With Thrift 48 Shop, you get more than just an online store – you get a fashion hub that combines the latest web technologies with a passion for thrift fashion. Dive into a world of style and innovation, all from the comfort of your screen.
+      `
     },
     {
       name: "Sekolah Baik",
-      description: "Sekolah Baik is a website app, contains five apps in one apps. The apps are Kitchen School E-commerce Apps, Education Apps, Chatting Apps, Exam Apps, any features.", 
+      description: "Sekolah Baik is a website app, contains five apps in one apps. The apps are Kitchen School E-commerce Apps, Education Apps, Chatting Apps, Exam Apps, any features.",
       image: "/assets/project/sekolah-baik.vercel.app.png",
-      video: "/assets/project/sekolah-baik.webm"
+      video: "/assets/project/sekolah-baik.webm",
+      copywriting: `Sekolah Baik is a revolutionary web app that brings together five powerful applications in one platform. Designed to enhance the educational experience, Sekolah Baik includes Kitchen School E-commerce, Education, Chatting, Exam apps, and more.
+        
+        Imagine a school app where you can do it all – from ordering lunch, chatting with classmates, to taking exams, all in one place. Sekolah Baik makes this possible, offering a seamless and efficient way to manage school activities.
+        
+        Built with a focus on user experience, Sekolah Baik leverages the power of modern web technologies like React and Next.js. This ensures the app is not only functional but also fast and reliable, providing a smooth experience for students and teachers alike.
+        
+        Whether you’re a student looking to streamline your school tasks or a teacher wanting to enhance the learning experience, Sekolah Baik is the perfect solution. Dive into a world of convenience and innovation with this all-in-one school app.
+      `
     },
     {
       name: "University MSJ",
-      description: "University MSJ is a website for a college. The Program is include administation, O-Auth Login, Responsive design web app, registration, and portofolio from the college", 
+      description: "University MSJ is a website for a college. The Program is include administation, O-Auth Login, Responsive design web app, registration, and portofolio from the college",
       image: "/assets/project/desktop-university-msj.png",
-      video: "/assets/project/univmsj.webm"  
+      video: "/assets/project/univmsj.webm",
+      copywriting: `University MSJ is the ultimate web platform for colleges, designed to streamline administrative tasks and enhance the student experience. From administration to portfolio showcases, this website has it all.
+        
+        Imagine a college website that not only looks great but also offers a seamless experience for both students and staff. University MSJ makes this possible with features like O-Auth login, responsive design, and easy registration processes.
+        
+        Built using the latest web technologies, University MSJ ensures a smooth and efficient user experience. The responsive design means it looks great on any device, whether you’re accessing it from a laptop, tablet, or smartphone.
+        
+        University MSJ is more than just a website – it’s a comprehensive solution that supports every aspect of college life. With a focus on functionality and user experience, this platform is designed to meet the needs of modern educational institutions.
+      `
     },
     {
       name: "To Do Application",
       description: "This is my first project web app, it is responsive. But i make it with PHP Language, and i dont know how to deploy it ahahaha",
       image: "/assets/project/todoapp.png",
-      video: "/assets/project/todolist.webm"
+      video: "/assets/project/todolist.webm",
+      copywriting: `To Do Application is a simple yet powerful web app designed to help you keep track of your tasks. This was my first project, and I built it with a focus on responsiveness and usability.
+        
+        The app offers a clean, intuitive interface that makes it easy to add, manage, and complete tasks. Whether you’re using it for personal tasks or work-related projects, To Do Application is designed to keep you organized and on track.
+        
+        Built using PHP, this project was a great learning experience for me. While I’m still figuring out how to deploy it, the app itself is fully functional and showcases my ability to build responsive web applications.
+        
+        To Do Application is a testament to my journey as a developer. It’s simple, effective, and a great example of how even a basic project can provide valuable functionality. Stay tuned as I continue to refine and improve my skills!
+      `
     },
-    // {
-    //   name: "Kindes",
-    //   description: "Kindes is a real time chat app, you can chatting with your friends with secure, the chat app is can connect with your friends, and the chat app is have a login and log out systems"
-    // },
     {
       name: "Casecool",
-      description: "Casecool is a e-commerce casing handphone, the users are can costumize the image by himself. It is the coolest project, because it is can design an case ahahaha you can see and try self."
-      , image: "/assets/project/casecool.png",
-      video: "/assets/project/casecool.webm"
+      description: "Casecool is a e-commerce casing handphone, the users are can costumize the image by himself. It is the coolest project, because it is can design an case ahahaha you can see and try self.",
+      image: "/assets/project/casecool.png",
+      video: "/assets/project/casecool.webm",
+      copywriting: `Casecool is an exciting e-commerce platform for custom phone cases. This project lets users unleash their creativity by designing their own phone cases, making it a unique and personalized shopping experience.
+        
+        Imagine being able to create a phone case that reflects your style and personality. With Casecool, you can do just that. The platform is designed to be user-friendly, allowing you to easily upload and customize your own images.
+        
+        Built using React and Next.js, Casecool offers a seamless and responsive user experience. The site’s sleek design and intuitive interface make it fun and easy to create the perfect phone case.
+        
+        Casecool is not just an e-commerce site – it’s a platform for creativity and self-expression. Whether you’re looking for a unique gift or a case that’s uniquely yours, Casecool has got you covered. Dive in and start designing today!
+      `
     },
     {
       name: "Farras 3D Portofolio",
       description: "My first 3D Portofolio using GSAP and React.",
       image: "/assets/project/3d.png",
-      video: "/assets/project/3d.webm"
+      video: "/assets/project/3d.webm",
+      copywriting: `Farras 3D Portofolio is my first foray into the world of 3D web design. This portfolio project showcases my skills in using GSAP and React to create a visually stunning and interactive experience.
+        
+        Imagine a portfolio that’s not just a collection of work, but an immersive 3D experience. Farras 3D Portofolio brings my projects to life in a dynamic and engaging way, making it a standout presentation of my skills.
+        
+        Using GSAP for animations and React for the framework, this project is a perfect blend of creativity and technical expertise. The result is a portfolio that’s not only impressive but also a joy to explore.
+        
+        Farras 3D Portofolio is more than just a showcase of my work – it’s a demonstration of what’s possible with modern web technologies. Step into my world of 3D web design and see my projects in a whole new light.
+      `
     }
   ]
 }
