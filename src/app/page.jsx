@@ -11,11 +11,13 @@ import Header from "@/components/Header";
 import { useEffect, useRef, useState } from "react";
 import Card from "@/components/Card";
 import MarqueCard from "@/components/MarqueCard";
-import { myskill, service } from "@/model/data";
+import { myskill, project, service } from "@/model/data";
 import Image from "next/image";
+import ImageSlider from "@/components/ImageSlider";
 
 export default function Home() {
   const [activeCard, setActiveCard] = useState(1);
+  const [scroll, setScroll] = useState(1);
   const bapakCard = useRef(null);
   const barisanCard = useRef(null);
 
@@ -125,9 +127,8 @@ export default function Home() {
                 />
               </div>
               <p className="z-[2]">
-              ABOUT <br />
-              ME
-
+                ABOUT <br />
+                ME
               </p>
             </div>
             <div className="w-7/12 ">
@@ -175,21 +176,41 @@ export default function Home() {
         </div>
       </div>
 
-      <div>
+      <div className="max-h-svh">
         <Header title={"MY PROJECT"}>
           <Button name={"See More"} />
         </Header>
-        <div className="flex gap-4 mt-12">
-          <div className="w-8/12 aspect-video bg-white"></div>
-          <div className="w-4/12 grid grid-rows-2 gap-4">
-            <div className="h-full bg-white"></div>
-            <div className="h-full bg-white"></div>
+        <div className="flex mt-12 gap-3 whitespace-nowrap overflow-x-auto flex-1 relative hidden-bar">
+          {project.data.map((cb, i) => (
+            <ImageSlider
+              key={i}
+              setActiveCard={setScroll}
+              activeCard={scroll}
+              number={i + 1}
+              imageUrl={cb.image}
+            />
+          ))}
+        </div>
+        {/* <div className="h-3/4">
+          <div className="flex gap-4 mt-12 h-1/4 bg-white">
+            <img
+              src={"/assets/project/casecool.png"}
+              className="w-8/12 max-h-60 bg-red-500 h-1/2 object-scale-down"
+            />
+            <div className="w-4/12 gap-4 max-h-svh">
+              <img
+                src={
+                  "/assets/project/iPhone-13-PRO-thrift48shop.vercel.app.png"
+                }
+                className="h-full max-h-60 bg-yellow-300 w-full object-scale-down"
+              />
+            </div>
           </div>
-        </div>
-        <div className="flex gap-4 mt-4">
-          <div className="w-2/4 aspect-video bg-white"></div>
-          <div className="w-2/4 aspect-video bg-white"></div>
-        </div>
+          <div className="flex gap-4 mt-4">
+            <div className="w-2/4 aspect-video bg-white"></div>
+            <div className="w-2/4 aspect-video bg-white"></div>
+          </div>
+        </div> */}
       </div>
 
       <div className="">

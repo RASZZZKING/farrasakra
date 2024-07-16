@@ -11,7 +11,7 @@ const ImageSlider = ({ setActiveCard, activeCard, number, imageUrl }) => {
       } relative cursor-pointer`}
     >
       <div className="flex relative justify-between max-h-32 object-cover w-56">
-        <p className="absolute text-4xl w-full text-end z-10 font-semibold">0{number}</p>
+        {/* <p className="absolute text-4xl w-full text-end z-10 font-semibold">0{number}</p> */}
         <img src={imageUrl} alt="" className={`object-scale-down ${activeCard !== number && "grayscale"}`} />
       </div>
     </div>
