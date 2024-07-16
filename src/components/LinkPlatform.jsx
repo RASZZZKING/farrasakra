@@ -6,7 +6,7 @@ const LinkPlatform = ({ children, url, name }) => (
     <Link
       target="_blank"
       href={url}
-      className="flex gap-1.5 items-center btn btn-ghost"
+      className="flex gap-1.5 items-center btn max-lg:btn-xs btn-ghost"
     >
       {children}
       <p>{name}</p>
