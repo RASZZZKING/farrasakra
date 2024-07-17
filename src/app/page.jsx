@@ -69,7 +69,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="flex flex-col gap-6 lg:gap-12 px-8">
+    <div className="flex flex-col gap-6 lg:gap-12 max-lg:px-8">
       <div className="  lg:min-h-[90svh] lg:max-h-[90svh] border-b-2 max-lg:pb-4 max-lg:mt-4 max-lg:flex-col   border-slate-700 flex lg:justify-between items-start lg:items-center">
         <div className="flex items-end lg:w-1/2 justify-between">
           <div className="flex-col flex gap-4">

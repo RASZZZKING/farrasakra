@@ -59,16 +59,22 @@ const Navbar = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content -mr-10  border-white border-2 bg-base-100 rounded-box z-[1] mt-4 w-52 p-2 shadow"
+              className="menu menu-sm dropdown-content -mr-10  border-white border-2 bg-base-100 rounded-box z-[1] mt-4 w-32 p-2 shadow"
             >
               <li>
-                <a>Homepage</a>
+                <Link href={"/"} className={`${path === "/" && "text-white font-semibold"}`} >Home</Link>
               </li>
               <li>
-                <a>Portfolio</a>
+                <Link href={"/about"} className={`${path === "/about" && "text-white font-semibold"}`}>About</Link>
               </li>
               <li>
-                <a>About</a>
+                <Link href={"/service"} className={`${path === "/service" && "text-white font-semibold"}`}>Service</Link>
+              </li>
+              <li>
+                <Link href={"/project"} className={`${path === "/project" && "text-white font-semibold"}`}>Project</Link>
+              </li>
+              <li>
+                <Link href={"https://wa.me/+62838251028687"} className={`${path === "url" && "text-white font-semibold"}`}>Contact</Link>
               </li>
             </ul>
           </div>

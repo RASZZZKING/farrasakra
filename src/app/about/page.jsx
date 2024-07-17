@@ -1,7 +1,7 @@
 "use client";
 import Card from "@/components/Card";
 import Header from "@/components/Header";
-import { ArrowUpRight } from "@phosphor-icons/react/dist/ssr";
+import { ArrowUpRight, Book } from "@phosphor-icons/react/dist/ssr";
 import React, { useEffect, useRef, useState } from "react";
 import Button from "@/components/Button";
 import { experience, hobbies, myskill } from "@/model/data";
@@ -56,30 +56,33 @@ const Page = () => {
   }, []);
 
   return (
-    <div className="flex flex-col gap-12">
-      <div className="flex flex-col gap-12 mt-4 pt-6">
-        <div className="flex justify-between font-medium w-full">
+    <div className="flex flex-col gap-6 max-lg:px-8 lg:gap-12">
+      <div className="flex flex-col gap-10 mt-5 lg:gap-36 lg:my-4 lg:py-6 max-lg:border-slate-700 max-lg:border-b-2 pb-4">
+        <div className="flex justify-between font-medium w-full max-lg:hidden">
           <p>PROFESSIONAL WEB DEVELOPER</p>
           <p>1+ YEARS EXPERIENCE</p>
         </div>
         <div className="flex-1">
-          <div className="flex justify-between">
-            <div className="text-7xl font-bold relative flex-1">
-              <div className="absolute  flex items-end justify-center w-full h-full">
-                <div className="bg-white bg-opacity-10 h-2/3 aspect-square absolute"></div>
-                <Image
-                  width={10000}
-                  height={10000}
-                  className=" max-h-[30vh] grayscale aspect-square object-scale-down  "
-                  src={"/assets/lastras.png"}
-                />
+          <div className="flex justify-between max-lg:flex-col">
+            <div className="lg:text-7xl text-4xl relative flex-1 font-bold">
+              <div className="absolute flex items-center justify-center lg:w-full lg:h-full">
+                <div className="relative flex items-end lg:items-center justify-center">
+                  <div className="bg-white bg-opacity-10 h-full max-lg:h-3/4 aspect-square absolute"></div>
+                  <Image
+                    width={10000}
+                    height={10000}
+                    className=" max-h-[30vh] grayscale aspect-square object-scale-down  "
+                    src={"/assets/lastras.png"}
+                  />
+                </div>
               </div>
-              <p className=" z-[2]">
-              ABOUT <br />
-              ME
+              <p className="z-[2] whitespace-pre">
+                {`ABOUT
+ME`}
               </p>
+              <div className="w-full h-[22vh] lg:hidden"></div>
             </div>
-            <div className="w-7/12">
+            <div className="w-full lg:w-7/12">
               <p>
                 Hi Everyone, big thanks for you have come to see my first
                 website personal portofolio. Ya in this Website i will explains
@@ -100,7 +103,7 @@ const Page = () => {
               <br />
             </div>
           </div>
-          <p>
+          <p className="lg:mt-5">
             Right now i am a gapyear student, but i still learning because for
             me lesson is priority and it is important, Right now i am learning
             about web developer, SNBT for 2025, self-improvement, these all i
@@ -111,9 +114,9 @@ const Page = () => {
         </div>
       </div>
 
-      <div>
+      <div className="max-lg:border-slate-700 max-lg:border-b-2 max-lg:pb-6">
         <Header title={"MY HOBBIES"}></Header>
-        <div className="grid gap-3 grid-cols-3 mt-10">
+        <div className="grid gap-3 lg:grid-cols-3 mt-10">
           {hobbies.data.map((cb, i) => (
             <Card
               key={i}
@@ -127,9 +130,13 @@ const Page = () => {
         </div>
       </div>
       <div className="">
-        <Header title={"MY EXPERIENCE"}></Header>
+        <Header title={"EXPERIENCE"}>
+          <div className="btn lg:hidden max-lg:btn-sm  hover:text-white hover:border-4 border-4 border-white hover:border-white hover:bg-dark  bg-white text-black  font-semibold ">
+              <Book size="20"  />
+          </div>
+        </Header>
         <div className="scroller cards" ref={bapakCard}>
-          <ul className="scroller__inner mt-12 animate-view" ref={barisanCard}>
+          <ul className="scroller__inner mt-4 lg:mt-12 animate-view" ref={barisanCard}>
             {experience.data.map((cb, i) => (
               <MarqueCard
                 key={i}
