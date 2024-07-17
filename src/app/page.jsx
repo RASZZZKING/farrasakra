@@ -1,8 +1,13 @@
 "use client";
 import {
+  ArrowRight,
   ArrowUpRight,
+  Book,
+  BookBookmark,
+  BookOpenText,
   Envelope,
   InstagramLogo,
+  Laptop,
   WhatsappLogo,
 } from "@phosphor-icons/react/dist/ssr";
 import LinkPlatform from "@/components/LinkPlatform";
@@ -72,6 +77,7 @@ export default function Home() {
             <p className="font-bold text-4xl lg:text-8xl leading-tight">
               FARRAS AKHIRIO RAMADHAN
             </p>
+            {/* {MOBILE HIDDEN} */}
             <div className="flex flex-wrap max-lg:hidden lg:gap-6">
               <LinkPlatform
                 name={"Instagram"}
@@ -94,6 +100,7 @@ export default function Home() {
                 My Service <ArrowUpRight size={32} />
               </div>
             </div>
+            {/* MOBILE HIDDEN END */}
           </div>
         </div>
         <div className=" flex items-end justify-center relative">
@@ -131,29 +138,32 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="flex flex-col gap-10 lg:gap-36 lg:my-4 lg:py-6">
-        <div className="flex justify-between font-medium w-full">
+      <div className="flex flex-col gap-10 lg:gap-36 lg:my-4 lg:py-6 max-lg:border-slate-700 max-lg:border-b-2 pb-4">
+        <div className="lg:flex justify-between font-medium w-full hidden">
           <p>PROFFESIONAL WEB DEVELOPER</p>
-          <p>1+ YEARS EXPERIENCE</p>
+          <p className="text-end">1+ YEARS EXPERIENCE</p>
         </div>
         <div className="flex-1">
-          <div className="flex justify-between">
+          <div className="flex justify-between max-lg:flex-col">
             <div className="lg:text-7xl text-4xl relative flex-1 font-bold">
-              <div className="absolute  flex items-end justify-center w-full h-full">
-                <div className="bg-white bg-opacity-10 h-2/3 aspect-square absolute"></div>
-                <Image
-                  width={10000}
-                  height={10000}
-                  className=" max-h-[30vh] grayscale aspect-square object-scale-down  "
-                  src={"/assets/lastras.png"}
-                />
+              <div className="absolute flex items-center justify-center lg:w-full lg:h-full">
+                <div className="relative flex items-end lg:items-center justify-center">
+                  <div className="bg-white bg-opacity-10 h-full max-lg:h-3/4 aspect-square absolute"></div>
+                  <Image
+                    width={10000}
+                    height={10000}
+                    className=" max-h-[30vh] grayscale aspect-square object-scale-down  "
+                    src={"/assets/lastras.png"}
+                  />
+                </div>
               </div>
-              <p className="z-[2]">
-                ABOUT <br />
-                ME
+              <p className="z-[2] whitespace-pre">
+                {`ABOUT
+ME`}
               </p>
+              <div className="w-full h-[22vh] lg:hidden"></div>
             </div>
-            <div className="w-7/12 ">
+            <div className="w-full lg:w-7/12  ">
               <p>
                 Hi Everyone, big thanks for you have come to see my first
                 website personal portofolio. Ya in this Website i will explains
@@ -172,19 +182,26 @@ export default function Home() {
                 experience and some books.
               </p>
               <br />
-              <Button name={"Read more"} />
+              <div className="w-full flex max-lg:justify-end">
+                <Button name={"Read more"} />
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-      <div>
+      <div className="max-lg:border-slate-700 max-lg:border-b-2 pb-8">
         <Header title={"SERVICE"}>
-          <div className="btn  hover:text-white hover:border-4 border-4 border-white hover:border-white hover:bg-dark  bg-white text-black  font-semibold ">
-            BOOK SERVICE <ArrowUpRight size={20} />
+          <div className="btn max-lg:btn-sm  hover:text-white hover:border-4 border-4 border-white hover:border-white hover:bg-dark  bg-white text-black  font-semibold ">
+            <span className="max-lg:hidden">
+              BOOK SERVICE <ArrowUpRight size={20} />
+            </span>
+            <span className="lg:hidden">
+              <BookOpenText size={20} />
+            </span>
           </div>
         </Header>
-        <div className="grid gap-3 grid-cols-3 mt-10">
+        <div className="grid gap-3 lg:grid-cols-3 mt-6 lg:mt-10">
           {service.data.map((cb, i) => (
             <Card
               key={i}
@@ -198,12 +215,28 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="max-h-svh">
+      <div className="lg:max-h-svh max-lg:border-slate-700 max-lg:border-b-2 pb-8">
         <Header title={"MY PROJECT"}>
-          <Button name={"See More"} />
+          <div className="max-lg:hidden">
+            <Button name={"See More"} />
+          </div>
+          <div className="btn lg:hidden max-lg:btn-sm  hover:text-white hover:border-4 border-4 border-white hover:border-white hover:bg-dark  bg-white text-black  font-semibold ">
+              <Laptop size="20"  />
+          </div>
         </Header>
-        <div className="grid grid-cols-5 mt-12 gap-3 flex-1">
+        <div className="max-lg:hidden grid lg:grid-cols-5 mt-8 lg:mt-12 gap-3 flex-1 items-center justify-center">
           {project.data.slice(0, 5).map((cb, i) => (
+            <ImageSlider
+              key={i}
+              setActiveCard={setScroll}
+              activeCard={scroll}
+              number={i + 1}
+              imageUrl={cb.image}
+            />
+          ))}
+        </div>
+        <div className="lg:hidden grid lg:grid-cols-5 mt-8 lg:mt-12 gap-3 flex-1 items-center justify-center">
+          {project.data.slice(0, 3).map((cb, i) => (
             <ImageSlider
               key={i}
               setActiveCard={setScroll}
@@ -237,7 +270,13 @@ export default function Home() {
 
       <div className="">
         <Header title={"MY SKILLS"}>
+          <div className="max-lg:hidden">
           <Button name={"See more"} />
+
+          </div>
+          <div className="btn lg:hidden max-lg:btn-sm  hover:text-white hover:border-4 border-4 border-white hover:border-white hover:bg-dark  bg-white text-black  font-semibold ">
+              <Book size="20"  />
+          </div>
         </Header>
         <div className="scroller cards" ref={bapakCard}>
           <ul className="scroller__inner mt-12 animate-view" ref={barisanCard}>

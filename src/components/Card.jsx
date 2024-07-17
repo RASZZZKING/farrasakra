@@ -11,8 +11,8 @@ const Card = ({ setActiveCard, activeCard, number, header, content }) => {
       } cursor-pointer `}
     >
       <div className="flex justify-between">
-        <p className=" text-4xl mb-4 font-bold uppercase">{header}</p>
-        <p className="text-4xl w-full text-end font-semibold">0{number}</p>
+        <p className=" text-2xl lg:text-4xl mb-4 font-bold uppercase">{header}</p>
+        <p className="text-2xl lg:text-4xl w-full text-end font-semibold">0{number}</p>
       </div>
       <p className="opacity-65">{content}</p>
     </div>

@@ -9,7 +9,7 @@ const MarqueCard = ({
   badge,
 }) => {
   return (
-    <li className={`card max-w-96 ${isMain ? " text-black" : "text-white  bg-opacity-10"}  bg-white  shadow-xl`}>
+    <li className={`card max-w-80 lg:max-w-96 ${isMain ? " text-black" : "text-white  bg-opacity-10"}  bg-white  shadow-xl`}>
       <div className="card-body ">
         <h2 className="card-title">
           {title}
