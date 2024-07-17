@@ -192,13 +192,11 @@ ME`}
 
       <div className="max-lg:border-slate-700 max-lg:border-b-2 pb-8">
         <Header title={"SERVICE"}>
-          <div className="btn max-lg:btn-sm  hover:text-white hover:border-4 border-4 border-white hover:border-white hover:bg-dark  bg-white text-black  font-semibold ">
-            <span className="max-lg:hidden">
+          <div className="btn max-lg:hidden max-lg:btn-sm  hover:text-white hover:border-4 border-4 border-white hover:border-white hover:bg-dark  bg-white text-black  font-semibold ">
               BOOK SERVICE <ArrowUpRight size={20} />
-            </span>
-            <span className="lg:hidden">
+          </div>
+          <div className="btn lg:hidden max-lg:btn-sm  hover:text-white hover:border-4 border-4 border-white hover:border-white hover:bg-dark  bg-white text-black  font-semibold ">
               <BookOpenText size={20} />
-            </span>
           </div>
         </Header>
         <div className="grid gap-3 lg:grid-cols-3 mt-6 lg:mt-10">
