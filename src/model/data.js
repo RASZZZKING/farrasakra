@@ -84,7 +84,7 @@ const experience = {
       badge: ["EVENT", "BA"],
     },
     {
-      title: "OWNER BUSINESS PARTY HELM AT TOKOPEDIA",
+      title: "EX OWNER BUSINESS PARTY HELM AT TOKOPEDIA",
       imageUrl: "",
       altImage: "",
       isMain: true,
@@ -93,7 +93,7 @@ const experience = {
       badge: ["BUSINESS", "SHOP"],
     },
     {
-      title: "RESELLER FROM DROPSHIPAJA.COM AND TALK ME",
+      title: "EX RESELLER FROM DROPSHIPAJA.COM AND TALK ME",
       imageUrl: "",
       altImage: "",
       isMain: true,
@@ -105,7 +105,7 @@ const experience = {
       title: "1st CHAMPION OF MOBILE LEGEND TOURNAMET AT CLASSMEET 2022",
       imageUrl: "",
       altImage: "",
-      isMain: true,
+      isMain: false,
       description:
         "Hahaha it is a fruit of workteam, because in game we must have a nice communiaction, skills, and workteam.",
       badge: ["GAME", "CLASSMEET"],
@@ -114,7 +114,7 @@ const experience = {
       title: "2st CHAMPION OF MOBILE LEGEND TOURNAMET AT CLASSMEET 2021",
       imageUrl: "",
       altImage: "",
-      isMain: true,
+      isMain: false,
       description:
         "My First Tournamet Mobile Legend with my classmate, i am a jungler.",
       badge: ["GAME", "CLASSMEET"],
@@ -123,7 +123,7 @@ const experience = {
       title: "TOP GLOBAL ZHASK NO.8 S23",
       imageUrl: "",
       altImage: "",
-      isMain: true,
+      isMain: false,
       description:
         "It is just a small achievement, it is not a achievement on realife so right now i am not playing game again, i am enjoying my life rn.",
       badge: ["GAME"],

@@ -1,7 +1,7 @@
 "use client";
 import Card from "@/components/Card";
 import Header from "@/components/Header";
-import { ArrowUpRight, Book } from "@phosphor-icons/react/dist/ssr";
+import { ArrowUpRight, Book, X } from "@phosphor-icons/react/dist/ssr";
 import React, { useEffect, useRef, useState } from "react";
 import Button from "@/components/Button";
 import { experience, hobbies, myskill } from "@/model/data";
@@ -10,6 +10,7 @@ import Image from "next/image";
 
 const Page = () => {
   const [activeCard, setActiveCard] = useState(1);
+  const [showExperience, setShowExperience] = useState(false)
   const bapakCard = useRef(null);
   const barisanCard = useRef(null);
 
@@ -131,7 +132,15 @@ ME`}
       </div>
       <div className="">
         <Header title={"EXPERIENCE"}>
-          <div className="btn lg:hidden max-lg:btn-sm  hover:text-white hover:border-4 border-4 border-white hover:border-white hover:bg-dark  bg-white text-black  font-semibold ">
+        <div
+            className="max-lg:hidden cursor-pointer"
+            onClick={() => setShowExperience(!showExperience)}
+          >
+            <div className="btn max-lg:btn-md hover:text-white hover:border-4 border-4 border-slate-900 hover:border-white hover:bg-dark  bg-black text-white  font-semibold ">
+              See more <ArrowUpRight size={20} />
+            </div>
+          </div>
+          <div onClick={()=>setShowExperience(!showExperience)} className="btn lg:hidden max-lg:btn-sm  hover:text-white hover:border-4 border-4 border-white hover:border-white hover:bg-dark  bg-white text-black  font-semibold ">
               <Book size="20"  />
           </div>
         </Header>
@@ -149,6 +158,43 @@ ME`}
               />
             ))}
           </ul>
+        </div>
+      </div>
+
+
+      <div
+        className={`${
+          !showExperience && "hidden"
+        } fixed z-[100] top-0 left-0 h-svh w-svw max-w-[100svw]  backdrop-filter backdrop-blur-lg bg-opacity-20 p-10`}
+      >
+        <div className="bg-zinc-900 max-w-full min-h-full max-h-full p-4 overflow-auto hidden-bar">
+          <div className="flex items-center justify-between mb-4">
+            <p className="text-4xl font-semibold">MY SKILLSHET</p>
+            <div
+              onClick={() => setShowExperience(!showExperience)}
+              className="btn btn-xs bg-black border-2 border-white text-white"
+            >
+              <X
+                weight="bold"
+                size={15}
+                className="cursor-pointer font-semibold"
+              />
+            </div>
+          </div>
+          <div className="grid lg:grid-cols-4 gap-4 overflow-auto">
+            {experience.data.map((cb, i) => (
+              <MarqueCard
+                key={i}
+                imageUrl={cb.imageUrl}
+                altImage={cb.altImage}
+                title={cb.title}
+                isMain={cb.isMain}
+                description={cb.description}
+                badge={cb.badge}
+                dontShow={true}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </div>

@@ -17,7 +17,7 @@ const Page = () => {
         <Header title={service.data[activeCard - 1].name}>
           <Link
             target="_blank"
-            href={"https://wa.me/+628382501287"}
+            href={"https://wa.me/+628382510287"}
             className=" max-lg:hidden btn  hover:text-white hover:border-4 border-4 border-white hover:border-white hover:bg-dark  bg-white text-black  font-semibold "
           >
             Contact Me <ArrowUpRight size={20} />

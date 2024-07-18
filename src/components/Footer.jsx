@@ -1,3 +1,4 @@
+"use client"
 import {
   ArrowUp,
   ArrowUpRight,
@@ -25,6 +26,13 @@ const Footer = () => {
       <ArrowUpRight size={20} className="mt-0.5 max-lg:hidden" />
     </Link>
   );
+  const scrollToTop = (e) => {
+    e.preventDefault()
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
   return (
     <div className="flex justify-center ">
       <div className="navbar max-lg:px-4 justify-between max-lg:pb-3 px-0 border-b-2 border-b-slate-600 bg-base-100">
@@ -56,7 +64,7 @@ const Footer = () => {
             <WhatsappLogo size={20} />
           </LinkPlatform>
         </div>
-        <div className="btn lg:hidden  hover:text-white btn-sm hover:border-2 border-2 border-white hover:border-white hover:bg-dark  bg-white text-black  font-semibold ">
+        <div onClick={scrollToTop} className="btn lg:hidden  hover:text-white btn-sm hover:border-2 border-2 border-white hover:border-white hover:bg-dark  bg-white text-black  font-semibold ">
         <ArrowUp size={20} weight="bold" />
         </div>
         {/* <div className="dropdown lg:hidden dropdown-left dropdown-bottom">
