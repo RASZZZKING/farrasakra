@@ -12,13 +12,14 @@ const Navbar = () => {
         className={`${
           path === url && "font-semibold text-white border border-slate-800"
         }`}
+        target={children === "CONTACT" ? "_blank" : ""}
       >
         {children}
       </Link>
     </li>
   );
   return (
-    <div className="flex justify-center ">
+    <div className="flex justify-center">
       <div className="navbar max-lg:px-4 border-b-2 border-b-slate-600 bg-base-100">
         <div className="flex-1">
           <Link
@@ -74,7 +75,7 @@ const Navbar = () => {
                 <Link href={"/project"} className={`${path === "/project" && "text-white font-semibold"}`}>Project</Link>
               </li>
               <li>
-                <Link href={"https://wa.me/+62838251028687"} className={`${path === "url" && "text-white font-semibold"}`}>Contact</Link>
+                <Link target="_blank" href={"https://wa.me/+62838251028687"} className={`${path === "url" && "text-white font-semibold"}`}>Contact</Link>
               </li>
             </ul>
           </div>

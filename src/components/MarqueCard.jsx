@@ -1,3 +1,4 @@
+import { usePathname } from "next/navigation";
 import React from "react";
 
 const MarqueCard = ({
@@ -7,13 +8,15 @@ const MarqueCard = ({
   isMain,
   description,
   badge,
+  dontShow
 }) => {
   return (
-    <li className={`card max-w-80 lg:max-w-96 ${isMain ? " text-black" : "text-white  bg-opacity-10"}  bg-white  shadow-xl`}>
+  
+    <div className={`card ${!dontShow ? "max-w-80 lg:max-w-96" : "w-full"} ${isMain ? " text-black" : "text-white  bg-opacity-10"}  bg-white  shadow-xl`}>
       <div className="card-body ">
         <h2 className="card-title">
           {title}
-          {isMain && <div className="badge badge-secondary">MAIN</div>}
+          {isMain && !dontShow && <div className="badge badge-secondary">MAIN</div>}
         </h2>
         <p className="text-wrap">{description}</p>
         <div className="card-actions justify-end">
@@ -24,7 +27,7 @@ const MarqueCard = ({
           ))}
         </div>
       </div>
-    </li>
+    </div>
   );
 };
 
